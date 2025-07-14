@@ -22,8 +22,13 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+          ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << EOF
             cd ${{ secrets.APP_DIR }}
+
+            if [ ! -d .git ]; then
+              git clone https://github.com/KevinHenleyCode/Portfolio-2025.git
+            fi
+
             git pull origin main
             npm install
             npm run build
