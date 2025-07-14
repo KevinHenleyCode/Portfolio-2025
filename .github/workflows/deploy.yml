@@ -27,7 +27,7 @@ jobs:
             cd ${{ secrets.APP_DIR }}
 
             if [ ! -d .git ]; then
-              git clone git@github.com:KevinHenleyCode/Portfolio-2025.git .
+              git clone https://github.com/KevinHenleyCode/Portfolio-2025.git .
             fi
 
             git pull origin main
