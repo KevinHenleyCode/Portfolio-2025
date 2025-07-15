@@ -9,7 +9,7 @@ export default function Home() {
         Setting Up New Portfolio
       </p>
       <p className='mt-10 text-xl font-medium text-lime-400'>
-        Monday 7/14/2025
+        Tuesday 7/15/2025
       </p>
       <Link
         href={'https://github.com/KevinHenleyCode'}
