@@ -13,6 +13,19 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+        #Open port 22 to 0.0.0.0/0 temporarily
+      - name: Temporarily open port 22 to 0.0.0.0/0
+        run: |
+          aws ec2 authorize-security-group-ingress \
+            --group-id ${{ secrets.AWS_SECURITY_GROUP_ID }} \
+            --protocol tcp \
+            --port 22 \
+            --cidr 0.0.0.0/0
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
@@ -35,3 +48,17 @@ jobs:
             npm run build
             pm2 restart portfolio
           EOF
+
+        #Revoke open SSH access after deployment
+      - name: Lock down port 22 again
+        if: always()
+        run: |
+          aws ec2 revoke-security-group-ingress \
+            --group-id ${{ secrets.AWS_SECURITY_GROUP_ID }} \
+            --protocol tcp \
+            --port 22 \
+            --cidr 0.0.0.0/0
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
