@@ -1,16 +1,14 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import { Orbitron } from 'next/font/google'
+import type { Metadata } from 'next'
 import NavBar from '@/components/nav/NavBar'
+import type { ReactNode } from 'react'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const orbitron = Orbitron({
   subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-orbitron',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -18,19 +16,19 @@ export const metadata: Metadata = {
   description: 'My Code Portfolio',
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+type RootLayoutProps = {
+  children: ReactNode
+}
+
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <html lang='en'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-[#121212] antialiased`}
-      >
+    <html lang='en' className={orbitron.variable}>
+      <body className={`flex min-h-screen flex-col antialiased`}>
         <NavBar />
-        {children}
+        <main className='bg-custom-dark flex-1 px-20 py-10'>{children}</main>
       </body>
     </html>
   )
 }
+
+export default RootLayout

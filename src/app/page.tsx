@@ -4,7 +4,7 @@ import { VscGithub } from 'react-icons/vsc'
 export default function Home() {
   return (
     <div className='flex flex-col items-center justify-center p-20'>
-      <h1 className='text-6xl font-semibold tracking-widest text-gray-300 uppercase'>
+      <h1 className='text-4xl font-semibold tracking-widest text-gray-300 uppercase sm:text-6xl'>
         Welcome
       </h1>
       <Link
