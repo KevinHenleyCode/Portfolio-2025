@@ -1,6 +1,8 @@
 'use client'
 import Link from 'next/link'
 import { useState } from 'react'
+import NavButton from './NavButton'
+import NavLinks from './NavLinks'
 
 const NavBar = () => {
   const [navOpen, setNavOpen] = useState(false)
@@ -15,66 +17,21 @@ const NavBar = () => {
           <p className='text-2xl font-bold tracking-wider text-rose-600'>
             Kevin Henley
           </p>
-          <button
-            onClick={() => setNavOpen(!navOpen)}
-            className='text-rose-600 lg:hidden'
-          >
-            <div className='flex flex-col justify-between text-xl font-bold'>
-              <p
-                className={`h-[6px] transition-all duration-300 ease-in-out ${!navOpen ? 'rotate-90' : 'translate-x-.5 -translate-y-1 rotate-45'}`}
-              >
-                |
-              </p>
-              <p
-                className={`h-[6px] transition-all duration-300 ease-in-out ${!navOpen ? 'rotate-90' : 'hidden opacity-0'}`}
-              >
-                |
-              </p>
-              <p
-                className={`h-[6px] transition-all duration-300 ease-in-out ${!navOpen ? 'rotate-90' : '-translate-x-4 -translate-y-2.5 -rotate-45'}`}
-              >
-                |
-              </p>
-            </div>
-          </button>
+          <NavButton navOpen={navOpen} setNavOpen={setNavOpen} />
         </span>
         <span
           className={`${navOpen ? 'absolute top-12' : 'absolute -top-130'} w-full transition-all duration-500 ease-in-out lg:hidden`}
         >
-          <ul
-            className={`flex flex-col items-center justify-between bg-rose-950 px-4 py-2`}
-          >
-            <li>
-              <Link href={'/'}>About</Link>
-            </li>
-            <li>
-              <Link href={'/'}>Tech</Link>
-            </li>
-            <li>
-              <Link href={'/'}>Portfolio</Link>
-            </li>
-            <li>
-              <Link href={'/'}>Contact</Link>
-            </li>
-          </ul>
+          <NavLinks
+            links={['About', 'Tech', 'Portfolio', 'Contact']}
+            mobile={true}
+          />
         </span>
         <span className='bg-custom-dark hidden w-1/2 lg:block'>
-          <ul
-            className={`flex flex-row items-center justify-between px-4 py-2`}
-          >
-            <li>
-              <Link href={'/'}>About</Link>
-            </li>
-            <li>
-              <Link href={'/'}>Tech</Link>
-            </li>
-            <li>
-              <Link href={'/'}>Portfolio</Link>
-            </li>
-            <li>
-              <Link href={'/'}>Contact</Link>
-            </li>
-          </ul>
+          <NavLinks
+            links={['About', 'Tech', 'Portfolio', 'Contact']}
+            mobile={false}
+          />
         </span>
       </div>
     </nav>
