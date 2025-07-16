@@ -10,7 +10,7 @@ export default function Home() {
       <Link
         href={'https://github.com/KevinHenleyCode'}
         target='_blank'
-        className='mt-10 text-4xl text-rose-600 transition-all duration-200 ease-in-out hover:text-rose-500'
+        className='mt-10 text-4xl text-lime-600 transition-all duration-200 ease-in-out hover:text-lime-500'
       >
         <VscGithub />
       </Link>
