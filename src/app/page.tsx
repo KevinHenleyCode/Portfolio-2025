@@ -5,9 +5,12 @@ export default function Home() {
         <h1 className='text-2xl font-semibold tracking-widest uppercase sm:text-4xl md:text-6xl'>
           Kevin Henley
         </h1>
-        <h2 className='mt-2 pl-2 text-sm font-semibold text-lime-400 italic sm:text-lg lg:text-xl'>
-          Full-Stack Web Developer
-        </h2>
+        <div className='relative'>
+          <h2 className='absolute z-30 mt-2 pl-2 text-sm font-semibold text-lime-400 italic sm:text-lg lg:text-xl'>
+            Full-Stack Web Developer
+          </h2>
+          <span className='-left-auto absolute top-1 h-8 w-screen bg-lime-800/20 sm:top-2'></span>
+        </div>
       </section>
       <article className='text-md mt-10 tracking-widest sm:mt-16 sm:text-lg md:mt-20 md:text-xl [&>p]:mt-4'>
         <p>
