@@ -49,7 +49,7 @@ export default function Home() {
           This current site was built from the ground up and deployed on an AWS
           EC2 instance, which I configured and manage directly. Every page is
           written using the same technologies I work with every day: Next,
-          TypeScript, and Tailwind. You'll find throughout the site sections
+          TypeScript, and Tailwind. {`You'll`} find throughout the site sections
           showcasing my favorite tools, links to the projects {`I’ve`} been
           building, and ways to get in touch.
         </p>
