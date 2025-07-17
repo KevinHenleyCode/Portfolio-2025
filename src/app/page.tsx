@@ -11,7 +11,7 @@ export default function Home() {
       </section>
       <article className='text-md mt-10 tracking-widest sm:mt-16 sm:text-lg md:mt-20 md:text-xl [&>p]:mt-4'>
         <p>
-          Welcome to my portfolio. I'm Kevin, a developer with a passion for
+          Welcome to my portfolio. {`I'm`} Kevin, a developer with a passion for
           building fast, responsive, and scalable web applications. This site is
           a reflection of my journey, both where {`I’ve`} been professionally
           and where {`I’m`} heading next.
