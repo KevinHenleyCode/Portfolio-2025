@@ -21,16 +21,10 @@ const NavBar = () => {
         <span
           className={`${navOpen ? 'absolute top-12' : 'absolute -top-130'} w-full transition-all duration-500 ease-in-out lg:hidden`}
         >
-          <NavLinks
-            links={['About', 'Tech', 'Portfolio', 'Contact']}
-            mobile={true}
-          />
+          <NavLinks links={['Tech', 'Portfolio']} mobile={true} />
         </span>
         <span className='bg-custom-dark hidden w-1/2 lg:block'>
-          <NavLinks
-            links={['About', 'Tech', 'Portfolio', 'Contact']}
-            mobile={false}
-          />
+          <NavLinks links={['Tech', 'Portfolio']} mobile={false} />
         </span>
       </div>
     </nav>
