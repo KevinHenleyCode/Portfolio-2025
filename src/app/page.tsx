@@ -13,11 +13,11 @@ export default function Home() {
         <p>
           Welcome to my portfolio. I'm Kevin, a developer with a passion for
           building fast, responsive, and scalable web applications. This site is
-          a reflection of my journey, both where I’ve been professionally and
-          where I’m heading next.
+          a reflection of my journey, both where {`I’ve`} been professionally
+          and where {`I’m`} heading next.
         </p>
         <p>
-          With over five years of experience in web development, I’ve led
+          With over five years of experience in web development, {`I’ve`} led
           frontend efforts for enterprise teams and shipped production-grade
           applications using React, Next.js, and Express. Most recently, I most
           recently, worked as a Senior Frontend Developer at VineBrook Homes,
@@ -38,27 +38,28 @@ export default function Home() {
           Throughout my time at VineBrook, I also worked cross-functionally with
           designers, marketers, and business stakeholders, and I learned when to
           push back. Whether it was managing scope creep from business leaders
-          or complex animations from designers that didn’t fit the original
+          or complex animations from designers that {`didn’t`} fit the original
           timeline, I made sure to communicate clearly and protect both our
-          deadlines and our team’s work balance. I’m easy to work with, but I
-          speak up when something’s off track. If a change meant delaying a
-          release or moving features to the next sprint, I made sure that was
-          discussed early and approved, not just assumed.
+          deadlines and our {`team’s`} work balance. {`I’m`} easy to work with,
+          but I speak up when {`something’s`} off track. If a change meant
+          delaying a release or moving features to the next sprint, I made sure
+          that was discussed early and approved, not just assumed.
         </p>
         <p>
           This current site was built from the ground up and deployed on an AWS
           EC2 instance, which I configured and manage directly. Every page is
           written using the same technologies I work with every day: Next,
           TypeScript, and Tailwind. You'll find throughout the site sections
-          showcasing my favorite tools, links to the projects I’ve been
+          showcasing my favorite tools, links to the projects {`I’ve`} been
           building, and ways to get in touch.
         </p>
         <p>
           Before tech, I worked in design and hands-on industries, which gave me
           a practical, solution-focused mindset that I bring into every project.
           My transition into development was accelerated through Rice
-          University’s Full Stack Bootcamp, and I’ve been sharpening my skills
-          ever since, learning Rust, Tauri, and expanding my AWS knowledge.
+          {`University’s`} Full Stack Bootcamp, and {`I’ve`} been sharpening my
+          skills ever since, learning Rust, Tauri, and expanding my AWS
+          knowledge.
         </p>
         <p>
           Thanks for stopping by. Feel free to contact me with any questions,
