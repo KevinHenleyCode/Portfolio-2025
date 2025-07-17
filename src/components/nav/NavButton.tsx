@@ -1,12 +1,11 @@
 import React from 'react'
 
-const NavButton = ({
-  navOpen,
-  setNavOpen,
-}: {
+interface NavButtonProps {
   navOpen: boolean
   setNavOpen: React.Dispatch<React.SetStateAction<boolean>>
-}) => {
+}
+
+const NavButton = ({ navOpen, setNavOpen }: NavButtonProps) => {
   return (
     <button
       onClick={() => setNavOpen(!navOpen)}

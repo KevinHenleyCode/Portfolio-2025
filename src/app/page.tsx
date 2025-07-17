@@ -1,16 +1,16 @@
-import SectionPadding from '@/components/containers/SectionPadding'
+import PaddingContainer from '@/components/containers/PaddingContainer'
 import SubHeader from '@/components/SubHeader'
 
 export default function Home() {
   return (
     <div className='text-gray-300'>
-      <SectionPadding>
+      <PaddingContainer>
         <h1 className='text-2xl font-semibold tracking-widest uppercase sm:text-4xl md:text-6xl'>
           Kevin Henley
         </h1>
-      </SectionPadding>
+      </PaddingContainer>
       <SubHeader subHeaderText={'Full-Stack Web Developer'} />
-      <SectionPadding>
+      <PaddingContainer>
         <article className='text-md mt-16 tracking-widest sm:text-lg md:mt-20 md:text-xl [&>p]:mt-4'>
           <p>
             Welcome to my portfolio. {`I'm`} Kevin, a developer with a passion
@@ -69,7 +69,7 @@ export default function Home() {
             and enjoy exploring the rest of the site.
           </p>
         </article>
-      </SectionPadding>
+      </PaddingContainer>
     </div>
   )
 }
