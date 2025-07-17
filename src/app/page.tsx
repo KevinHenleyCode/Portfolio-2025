@@ -1,15 +1,14 @@
 import PaddingContainer from '@/components/containers/PaddingContainer'
-import SubHeader from '@/components/SubHeader'
+import SubHeader from '@/components/textStanards/SubHeader'
+import Title from '@/components/textStanards/Title'
 
 export default function Home() {
   return (
-    <div className='text-gray-300'>
+    <div>
       <PaddingContainer>
-        <h1 className='text-2xl font-semibold tracking-widest uppercase sm:text-4xl md:text-6xl'>
-          Kevin Henley
-        </h1>
+        <Title content={'Kevin Henley'} />
       </PaddingContainer>
-      <SubHeader subHeaderText={'Full-Stack Web Developer'} />
+      <SubHeader content={'Full-Stack Web Developer'} />
       <PaddingContainer>
         <article className='text-md mt-16 tracking-widest sm:text-lg md:mt-20 md:text-xl [&>p]:mt-4'>
           <p>

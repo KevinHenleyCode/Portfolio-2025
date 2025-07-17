@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import NavButton from './NavButton'
 import NavLinks from './NavLinks'
+import Link from 'next/link'
 
 const NavBar = () => {
   const [navOpen, setNavOpen] = useState(false)
@@ -13,18 +14,21 @@ const NavBar = () => {
         <span
           className={`bg-custom-dark z-60 flex w-full justify-between px-4 py-2 text-left lg:w-1/2`}
         >
-          <p className='text-2xl font-bold tracking-wider text-rose-600'>
+          <Link
+            href={'/'}
+            className='text-2xl font-bold tracking-wider text-rose-600'
+          >
             Kevin Henley
-          </p>
+          </Link>
           <NavButton navOpen={navOpen} setNavOpen={setNavOpen} />
         </span>
         <span
           className={`${navOpen ? 'absolute top-12' : 'absolute -top-130'} w-full transition-all duration-500 ease-in-out lg:hidden`}
         >
-          <NavLinks links={['Tech', 'Portfolio']} mobile={true} />
+          <NavLinks links={['Tech', 'Portfolio', 'Updates']} mobile={true} />
         </span>
         <span className='bg-custom-dark hidden w-1/2 lg:block'>
-          <NavLinks links={['Tech', 'Portfolio']} mobile={false} />
+          <NavLinks links={['Tech', 'Portfolio', 'Updates']} mobile={false} />
         </span>
       </div>
     </nav>

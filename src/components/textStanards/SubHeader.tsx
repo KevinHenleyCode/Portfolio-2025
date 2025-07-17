@@ -1,10 +1,10 @@
 'use client'
 
 interface SubHeaderProps {
-  subHeaderText: string
+  content: string
 }
 
-const SubHeader = ({ subHeaderText }: SubHeaderProps) => {
+const SubHeader = ({ content }: SubHeaderProps) => {
   return (
     <div className='relative'>
       <span
@@ -18,7 +18,7 @@ const SubHeader = ({ subHeaderText }: SubHeaderProps) => {
       </span>
       <span className='absolute z-10 mt-2 flex h-8 items-center px-6 sm:h-9 sm:px-24 xl:px-48'>
         <h2 className='pl-2 text-sm font-semibold text-lime-400 italic sm:text-lg lg:text-xl'>
-          {subHeaderText}
+          {content}
         </h2>
       </span>
       <span
