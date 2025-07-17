@@ -9,12 +9,14 @@ export default function Home() {
         </h1>
       </SectionPadding>
       <div className='relative'>
-        <span className='absolute z-10 px-6 sm:px-24 xl:px-48'>
-          <h2 className='mt-2 pl-2 text-sm font-semibold text-lime-400 italic sm:text-lg lg:text-xl'>
+        <span className='absolute z-10 mt-2 px-6 sm:px-24 xl:px-48'>
+          <h2 className='pl-2 text-sm font-semibold text-lime-400 italic sm:text-lg lg:text-xl'>
             Full-Stack Web Developer
           </h2>
         </span>
-        <span className='-left-auto absolute top-1 ml-6 h-8 w-full bg-lime-800/20 sm:top-2 sm:ml-24 xl:ml-48'></span>
+        <span className='absolute top-1 w-full pl-6 sm:top-2 sm:pl-24 xl:pl-48'>
+          <p className='h-8 w-full bg-lime-800/20'></p>
+        </span>
       </div>
       <SectionPadding>
         <article className='text-md mt-16 tracking-widest sm:text-lg md:mt-20 md:text-xl [&>p]:mt-4'>
