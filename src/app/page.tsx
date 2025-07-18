@@ -20,15 +20,15 @@ export default function Home() {
           <p>
             With over five years of experience in web development, {`I’ve`} led
             frontend efforts for enterprise teams and shipped production-grade
-            applications using React, Next.js, and Express. Most recently, I
-            most recently, worked as a Senior Frontend Developer at VineBrook
-            Homes, where I led a team of eight developers and helped modernize
-            our stack from CakePHP to a Next.js/Express.js architecture, more
-            than doubling development speed and cutting load times by half.
+            applications using React, Next.js, and Express. I most recently,
+            worked as a Senior Frontend Web Developer at VineBrook Homes, where
+            I led a team of eight developers and helped modernize our stack from
+            CakePHP to a Next.js/Express.js architecture, more than doubling
+            development speed and cutting load times by half.
           </p>
           <p>
             A big part of that success came from working closely with our CTO,
-            with whom I regularly collaborated to exchange ideas and explore
+            with whom I collaborated with to exchange ideas and explore
             improvements to our development process. After pitching the idea to
             rebuild our client-facing site and internal reporting web app using
             a modern stack, I received his direct approval to lead the
@@ -37,9 +37,9 @@ export default function Home() {
           </p>
           <p>
             Throughout my time at VineBrook, I also worked cross-functionally
-            with designers, marketers, and business stakeholders, and I learned
-            when to push back. Whether it was managing scope creep from business
-            leaders or complex animations from designers that {`didn’t`} fit the
+            with designers, marketers, and management, and I learned when to
+            push back. Whether it was managing scope creep from business leaders
+            or complex animations from designers that {`didn’t`} fit the
             original timeline, I made sure to communicate clearly and protect
             both our deadlines and our {`team’s`} work balance. {`I’m`} easy to
             work with, but I speak up when {`something’s`} off track. If a
@@ -48,17 +48,17 @@ export default function Home() {
             assumed.
           </p>
           <p>
-            This current site was built from the ground up and deployed on an
-            AWS EC2 instance, which I configured and manage directly. Every page
-            is written using the same technologies I work with every day: Next,
-            TypeScript, and Tailwind. {`You'll`} find throughout the site
-            sections showcasing my favorite tools, links to the projects{' '}
-            {`I’ve`} been building, and ways to get in touch.
+            The site {`you're`} currently viewing was built from the ground up
+            and deployed on an AWS EC2 instance, which I configured and manage
+            directly. Every page is written using the same technologies I work
+            with every day: Next, TypeScript, and Tailwind. {`You'll`} find
+            throughout the site sections showcasing my favorite tools, links to
+            the projects {`I’ve`} been building, and ways to get in touch.
           </p>
           <p>
-            Before tech, I worked in design and hands-on industries, which gave
-            me a practical, solution-focused mindset that I bring into every
-            project. My transition into development was accelerated through Rice
+            Before tech, I worked in hands-on industries, which gave me a
+            practical, solution-focused mindset that I bring into every project.
+            My transition into development was accelerated through Rice
             {`University’s`} Full Stack Bootcamp, and {`I’ve`} been sharpening
             my skills ever since, learning Rust, Tauri, and expanding my AWS
             knowledge.
