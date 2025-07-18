@@ -15,6 +15,9 @@ const orbitron = Orbitron({
 export const metadata: Metadata = {
   title: 'Kevin Henley Code',
   description: 'My Code Portfolio',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 type RootLayoutProps = {
