@@ -15,9 +15,16 @@ const orbitron = Orbitron({
 export const metadata: Metadata = {
   title: 'Kevin Henley Code',
   description: 'My Code Portfolio',
-  icons: {
-    icon: '/favicon.svg',
-  },
+  icons: [
+    { rel: 'icon', url: '/favicon.svg' },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      url: '/favicon-32x32.png',
+    },
+    { rel: 'apple-touch-icon', sizes: '180x180', url: '/apple-touch-icon.png' },
+  ],
 }
 
 type RootLayoutProps = {
