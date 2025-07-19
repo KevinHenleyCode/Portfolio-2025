@@ -2,6 +2,10 @@ import PaddingContainer from '@/components/containers/PaddingContainer'
 import SubHeader from '@/components/textStanards/SubHeader'
 import Title from '@/components/textStanards/Title'
 
+export const metadata = {
+  title: 'Home',
+}
+
 export default function Home() {
   return (
     <div>

@@ -2,6 +2,10 @@ import PaddingContainer from '@/components/containers/PaddingContainer'
 import Title from '@/components/textStanards/Title'
 import SubHeader from '@/components/textStanards/SubHeader'
 
+export const metadata = {
+  title: 'Portfolio',
+}
+
 const Portfolio = () => {
   return (
     <div className='w-full'>

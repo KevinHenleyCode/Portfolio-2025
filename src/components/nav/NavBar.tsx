@@ -1,11 +1,18 @@
 'use client'
-import { useState } from 'react'
+
+import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import NavButton from './NavButton'
 import NavLinks from './NavLinks'
 import Link from 'next/link'
 
 const NavBar = () => {
   const [navOpen, setNavOpen] = useState(false)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    setNavOpen(false)
+  }, [pathname])
   return (
     <nav className='sticky top-0 z-50'>
       <div
@@ -16,7 +23,7 @@ const NavBar = () => {
         >
           <Link
             href={'/'}
-            className='text-2xl font-bold tracking-wider text-rose-600'
+            className='text-2xl font-bold tracking-wider text-rose-600 transition-all duration-300 ease-in-out hover:text-shadow-md hover:text-shadow-rose-500/50'
           >
             Kevin Henley
           </Link>

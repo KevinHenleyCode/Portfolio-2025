@@ -3,6 +3,10 @@ import Title from '@/components/textStanards/Title'
 import SubHeader from '@/components/textStanards/SubHeader'
 import TechOutline from '@/components/showCasing/TechOutline'
 
+export const metadata = {
+  title: 'Tech',
+}
+
 const Tech = () => {
   return (
     <div className='w-full'>
