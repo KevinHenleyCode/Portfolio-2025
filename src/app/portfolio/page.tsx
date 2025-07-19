@@ -31,6 +31,9 @@ const Portfolio = () => {
               `Integrate a lightweight blog/devlog to track progress`,
               `Continue refining performance and accessibility`,
             ]}
+            linkHeader={'Links'}
+            gitHubLink={'https://github.com/KevinHenleyCode/Portfolio-2025'}
+            siteLink={''}
           />
         </div>
       </PaddingContainer>
