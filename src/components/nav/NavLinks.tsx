@@ -14,7 +14,7 @@ const NavLinks = ({ links, mobile }: NavLinksProps) => {
         <li key={link}>
           <Link
             href={`${link.toLowerCase()}`}
-            className='border-b-2 border-lime-200/0 tracking-widest italic transition-all duration-300 ease-in-out hover:border-lime-200 hover:text-lime-200'
+            className='3xl:text-3xl 5xl:text-5xl border-b-2 border-lime-200/0 tracking-widest italic transition-all duration-300 ease-in-out hover:border-lime-200 hover:text-lime-200 xl:text-xl'
           >
             {link}
           </Link>

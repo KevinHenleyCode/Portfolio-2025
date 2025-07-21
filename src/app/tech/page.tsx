@@ -15,7 +15,7 @@ const Tech = () => {
       </PaddingContainer>
       <SubHeader content={'What I Use'} />
       <PaddingContainer>
-        <div className='mt-20 grid grid-cols-4 gap-8'>
+        <div className='mt-20 grid grid-cols-6 gap-8'>
           <TechOutline
             firstHeader={'Rice University Bootcamp'}
             summaryContent={

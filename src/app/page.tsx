@@ -14,7 +14,7 @@ export default function Home() {
       </PaddingContainer>
       <SubHeader content={'Full-Stack Web Developer'} />
       <PaddingContainer>
-        <article className='text-md mt-16 tracking-widest sm:text-lg md:mt-20 md:text-xl [&>p]:mt-4'>
+        <article className='text-md 3xl:text-2xl 4xl:text-3xl 5xl:text-4xl 3xl:[&>p]:mt-8 4xl:leading-10 5xl:leading-12 mt-20 leading-6 tracking-widest sm:text-lg sm:leading-8 md:mt-28 md:text-xl [&>p]:mt-4'>
           <p>
             Welcome to my portfolio. {`I'm`} Kevin, a developer with a passion
             for building fast, responsive, and scalable web applications. This

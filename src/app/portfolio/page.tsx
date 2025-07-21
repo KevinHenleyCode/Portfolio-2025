@@ -16,7 +16,7 @@ const Portfolio = () => {
       </PaddingContainer>
       <SubHeader content={`What I've Done & What I'm Doing... `} />
       <PaddingContainer>
-        <div className='mt-36 grid grid-cols-4 gap-8'>
+        <div className='mt-36 grid grid-cols-6 gap-8'>
           <PortfolioProjects
             projectImage={NotFoundImage}
             firstHeader={'Portfolio-2025'}

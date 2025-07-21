@@ -19,11 +19,11 @@ const NavBar = () => {
         className={`flex w-full flex-col font-semibold text-gray-100 shadow-rose-600 lg:flex-row ${!navOpen ? 'shadow-2xl' : 'shadow-sm'} transition-all duration-500 ease-in-out`}
       >
         <span
-          className={`bg-custom-dark z-60 flex w-full justify-between px-4 py-2 text-left lg:w-1/2`}
+          className={`bg-custom-dark z-60 flex w-full justify-between px-4 py-2 text-left lg:w-1/2 xl:py-4`}
         >
           <Link
             href={'/'}
-            className='text-2xl font-bold tracking-wider text-rose-600 transition-all duration-300 ease-in-out hover:text-shadow-md hover:text-shadow-rose-500/50'
+            className='3xl:text-5xl 5xl:text-7xl text-2xl font-bold tracking-wider text-rose-600 transition-all duration-300 ease-in-out hover:text-shadow-md hover:text-shadow-rose-500/50 xl:text-3xl'
           >
             Kevin Henley
           </Link>
