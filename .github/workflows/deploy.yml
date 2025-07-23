@@ -34,6 +34,14 @@ jobs:
           mkdir -p ~/.ssh
           printf "%s" "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+
+          echo "🔍 Pinging EC2 host to verify it's reachable..."
+          ping -c 3 ${{ secrets.EC2_HOST }}
+
+          echo "🔍 Checking if port 22 is open..."
+          nc -zv ${{ secrets.EC2_HOST }} 22
+
+          echo "📡 Attempting ssh-keyscan..."
           ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy to EC2
