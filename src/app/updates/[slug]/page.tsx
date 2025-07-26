@@ -41,7 +41,8 @@ const SingleUpdate = async ({ params }: SingleUpdateProps) => {
         <div className='mt-20'>
           <SingleUpdateOutline
             postImage={`${updateImageUrl}`}
-            postLink={''}
+            linkGitHub={update.linkGitHub}
+            linkWebSite={update.linkWebSite}
             mainBody={update.mainBody}
             additionalHeader={update.additionalHeader}
             additionalBody={update.additionalBody}

@@ -29,7 +29,7 @@ const AllUpdates = async () => {
       </PaddingContainer>
       <SubHeader content={`What's Happening Next...`} />
       <PaddingContainer>
-        <div className='mt-20'>
+        <div className='mt-20 grid grid-cols-8 gap-x-4 gap-y-8 2xl:mt-32'>
           {updates.map((update) => (
             <AllUpdatesOutline
               key={`${update._id}`}

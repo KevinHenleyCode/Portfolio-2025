@@ -15,12 +15,12 @@ const AllUpdatesOutline = ({
   slug,
 }: AllUpdatesOutlineProps) => {
   return (
-    <section key={key} className='mt-20 w-full'>
+    <section key={key} className='col-span-8 lg:col-span-4'>
       <Link
         href={`updates/${slug}`}
-        className='flex flex-col items-center justify-start border-1 border-rose-800 bg-rose-950/20 px-6 py-2 transition-all duration-300 ease-in-out hover:bg-rose-950 sm:w-fit sm:flex-row hover:[&>svg]:text-rose-400'
+        className='4xl:px-10 4xl:py-6 flex flex-col items-center justify-start border-1 border-rose-800 bg-rose-950/20 px-6 py-2 transition-all duration-300 ease-in-out hover:bg-rose-950 sm:w-fit sm:flex-row hover:[&>svg]:text-rose-400'
       >
-        <p className='4xl:text-3xl 5xl:text-5xl mr-2 text-sm font-semibold tracking-widest text-rose-500 xl:text-lg 2xl:text-2xl'>
+        <p className='4xl:text-3xl 5xl:text-5xl 3xl:text-2xl mr-2 text-sm font-semibold tracking-widest text-rose-500 xl:text-lg 2xl:text-xl'>
           {postHeader}:
         </p>
         <p className='4xl:text-2xl 5xl:text-4xl xl:text-md mr-4 text-xs tracking-widest text-gray-300 2xl:text-lg'>

@@ -1,12 +1,13 @@
 import Image from 'next/image'
-import { VscGithub } from 'react-icons/vsc'
 import { PortableText } from 'next-sanity'
 import Link from 'next/link'
 import { MdArrowBackIos } from 'react-icons/md'
+import { VscGithub, VscGlobe } from 'react-icons/vsc'
 
 interface SingleUpdateOutlineProps {
   postImage?: string
-  postLink?: string
+  linkGitHub?: string
+  linkWebSite?: string
   mainBody: string
   additionalHeader: string
   additionalBody: string
@@ -14,7 +15,8 @@ interface SingleUpdateOutlineProps {
 
 const SingleUpdateOutline = ({
   postImage,
-  postLink,
+  linkGitHub,
+  linkWebSite,
   mainBody,
   additionalHeader,
   additionalBody,
@@ -36,15 +38,20 @@ const SingleUpdateOutline = ({
       <hr className='mt-6 border-1 border-rose-950 bg-rose-950' />
       <article className='px-2'>
         <div className='mt-2 flex w-full items-end justify-start px-2'>
-          {postLink ? (
-            <Link
-              href={`${postLink}`}
-              target='_blank'
-              className='4xl:text-4xl 5xl:text-6xl 5xl:mr-4 mr-2 text-lg text-lime-600 transition-all duration-300 ease-in-out hover:text-lime-500 xl:text-xl 2xl:text-3xl'
-            >
-              <VscGithub />
-            </Link>
-          ) : null}
+          <Link
+            href={`${linkGitHub}`}
+            target='_blank'
+            className={`${linkGitHub ? 'block' : 'hidden'} 4xl:text-4xl 5xl:text-6xl 5xl:mr-4 mr-2 text-lg text-lime-600 transition-all duration-300 ease-in-out hover:text-lime-500 xl:text-xl 2xl:text-3xl`}
+          >
+            <VscGithub />
+          </Link>
+          <Link
+            href={`${linkWebSite}`}
+            target='_blank'
+            className={`${linkWebSite ? 'block' : 'hidden'} 4xl:text-4xl 5xl:text-6xl 5xl:mr-4 mr-2 text-lg text-lime-600 transition-all duration-300 ease-in-out hover:text-lime-500 xl:text-xl 2xl:text-3xl`}
+          >
+            <VscGlobe />
+          </Link>
         </div>
         <div className='4xl:text-2xl 4xl:leading-10 5xl:text-4xl 5xl:leading-12 4xl:mt-4 text-sm tracking-wider sm:text-lg 2xl:text-xl 2xl:leading-8 [&>p]:my-2'>
           {Array.isArray(mainBody) && <PortableText value={mainBody} />}
