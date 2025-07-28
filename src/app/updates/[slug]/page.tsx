@@ -7,8 +7,11 @@ import imageUrlBuilder from '@sanity/image-url'
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import { client } from '@/sanity/client'
 
-export const metadata = {
-  title: 'Updates',
+export async function generateMetadata({ params }: SingleUpdateProps) {
+  return {
+    title: (await params).slug,
+    description: 'Keep up to date on my latest progress',
+  }
 }
 
 const UPDATE_QUERY = `*[_type == "portfolioUpdate" && slug.current == $slug][0]`
