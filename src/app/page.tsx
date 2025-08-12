@@ -6,6 +6,9 @@ export const metadata = {
   title: 'Home',
 }
 
+/**
+ * Main page
+ */
 export default function Home() {
   return (
     <div>

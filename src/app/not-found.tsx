@@ -3,6 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import NotFoundImg from '../../public/images/not-found.svg'
 
+/**
+ * Defaults to if page doesn't exist
+ */
 export default function NotFound() {
   return (
     <section className='mt-36 text-gray-300'>

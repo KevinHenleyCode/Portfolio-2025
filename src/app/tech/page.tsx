@@ -7,6 +7,9 @@ export const metadata = {
   title: 'Tech',
 }
 
+/**
+ * List tech that I've used throughout my time as a developer
+ */
 const Tech = () => {
   return (
     <div className='w-full'>

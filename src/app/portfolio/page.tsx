@@ -8,6 +8,9 @@ export const metadata = {
   title: 'Portfolio',
 }
 
+/**
+ * An area to give more detail into each of the projects I've worked on
+ */
 const Portfolio = () => {
   return (
     <div className='w-full'>

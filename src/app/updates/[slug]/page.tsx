@@ -7,6 +7,9 @@ import imageUrlBuilder from '@sanity/image-url'
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import { client } from '@/sanity/client'
 
+/**
+ * Generates page based on params passed in slug
+ */
 export async function generateMetadata({ params }: SingleUpdateProps) {
   return {
     title: (await params).slug,

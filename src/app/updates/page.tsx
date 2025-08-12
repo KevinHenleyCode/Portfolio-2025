@@ -15,6 +15,9 @@ const UPDATES_QUERY = `*[
 ]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt}`
 const options = { next: { revalidate: 30 } }
 
+/**
+ * Holds links for all pages passed by Sanity
+ */
 const AllUpdates = async () => {
   const updates = await client.fetch<SanityDocument[]>(
     UPDATES_QUERY,
