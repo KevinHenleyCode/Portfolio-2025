@@ -2,6 +2,7 @@ import './globals.css'
 import { Orbitron } from 'next/font/google'
 import type { Metadata } from 'next'
 import NavBar from '@/components/nav/NavBar'
+// import NavBarNew from '@/components/nav/NavBarNew'
 import FooterBar from '@/components/nav/FooterBar'
 import type { ReactNode } from 'react'
 
@@ -36,6 +37,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
     <html lang='en' className={orbitron.variable}>
       <body className={`flex min-h-screen flex-col antialiased`}>
         <NavBar />
+        {/* <NavBarNew /> */}
         <main className='bg-custom-dark flex flex-1 flex-col items-center py-20 text-gray-300'>
           {children}
         </main>
