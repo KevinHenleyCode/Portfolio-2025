@@ -10,7 +10,7 @@ import { Github, Globe } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import NotFoundImage from '../../../public/images/next-js-icon.svg'
+import NotFoundImage from '../../../../public/images/next-js-icon.svg'
 
 export const metadata = {
   title: 'Portfolio',
@@ -21,14 +21,16 @@ export const metadata = {
  */
 const Portfolio = () => {
   return (
-    <div className='w-full px-4'>
-      <h1>Portfolio</h1>
-      <h2>
-        What {`I've`} Done & What {`I'm`} Doing...
-      </h2>
+    <div className='w-full px-4 py-10'>
+      <header>
+        <h1>Portfolio</h1>
+        <p>
+          What {`I've`} Done & What {`I'm`} Doing...
+        </p>
+      </header>
 
-      <section className='mt-20'>
-        <Card>
+      <section className='mt-20 grid grid-cols-12 gap-4'>
+        <Card className='4xl:col-span-3 col-span-12 lg:col-span-6 2xl:col-span-4'>
           <CardHeader className='w-full'>
             <div className='relative'>
               <Image
@@ -39,7 +41,9 @@ const Portfolio = () => {
                 className='w-full object-contain'
               />
             </div>
-            <CardTitle className='text-center'>Portfolio-2025</CardTitle>
+            <CardTitle className='text-center'>
+              <h2>Portfolio-2025</h2>
+            </CardTitle>
             <Separator />
           </CardHeader>
           <CardContent>

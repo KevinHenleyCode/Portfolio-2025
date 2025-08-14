@@ -33,7 +33,7 @@ const NavBar = () => {
   return (
     <div className='bg-background sticky top-0 z-10 w-full'>
       <div className='flex h-10 items-center justify-between px-4 lg:hidden'>
-        <Link href={'/'} className='tracking-widest'>
+        <Link href={'/new'} className='tracking-widest'>
           KEVIN HENLEY
         </Link>
         <DropdownMenu open={navOpen} onOpenChange={setNavOpen}>
@@ -61,24 +61,36 @@ const NavBar = () => {
             className='bg-background/90 min-w-[100vw] rounded-none tracking-widest backdrop-blur-xs'
           >
             <DropdownMenuItem>
-              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH}/tech`}>
+              <Link
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/new/tech`}
+                className='w-full'
+              >
                 Tech
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH}/portfolio`}>
+              <Link
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/new/portfolio`}
+                className='w-full'
+              >
                 Portfolio
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH}/updates`}>
+              <Link
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/new/updates`}
+                className='w-full'
+              >
                 Updates
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuLabel>APPS:</DropdownMenuLabel>
             <DropdownMenuItem>
-              <Link href={'https://books.kevinhenleycode.com'}>
+              <Link
+                href={'https://books.kevinhenleycode.com'}
+                className='w-full'
+              >
                 Book-Library
               </Link>
             </DropdownMenuItem>
