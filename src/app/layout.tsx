@@ -1,15 +1,22 @@
 import './globals.css'
-import { Orbitron } from 'next/font/google'
+import { Outfit, Source_Sans_3 } from 'next/font/google'
 import type { Metadata } from 'next'
 import NavBar from '@/components/nav/NavBar'
 // import NavBarNew from '@/components/nav/NavBarNew'
 import FooterBar from '@/components/nav/FooterBar'
 import type { ReactNode } from 'react'
 
-const orbitron = Orbitron({
+const display = Outfit({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-orbitron',
+  variable: '--font-display',
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+})
+
+const body = Source_Sans_3({
+  subsets: ['latin'],
+  variable: '--font-body',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
@@ -34,7 +41,7 @@ type RootLayoutProps = {
 
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <html lang='en' className={orbitron.variable}>
+    <html lang='en' className={`${display.variable} ${body.variable}`}>
       <body className={`flex min-h-screen flex-col antialiased`}>
         <NavBar />
         {/* <NavBarNew /> */}

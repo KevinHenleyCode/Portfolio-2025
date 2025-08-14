@@ -23,7 +23,7 @@ const NavBar = () => {
         >
           <Link
             href={'/'}
-            className='3xl:text-5xl 5xl:text-7xl text-2xl font-bold tracking-wider text-rose-600 transition-all duration-300 ease-in-out hover:text-shadow-md hover:text-shadow-rose-500/50 xl:text-3xl'
+            className='3xl:text-5xl 5xl:text-7xl font-display text-2xl font-bold tracking-wider text-rose-600 transition-all duration-300 ease-in-out hover:text-shadow-md hover:text-shadow-rose-500/50 xl:text-3xl'
           >
             Kevin Henley
           </Link>

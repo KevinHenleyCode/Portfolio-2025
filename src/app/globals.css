@@ -1,13 +1,32 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
+/* 
+  ---break---
+  */
+
+@theme {
+  /* 
+  sm	  40rem	   width >= 640px 
+  md	  48rem    width >= 768px 
+  lg	  64rem    width >= 1024px 
+  xl	  80rem    width >= 1280px 
+  2xl	  96rem    width >= 1536px 
+  3xl	  120rem   width >= 1920px
+  4xl	  160rem   width >= 2560px
+  5xl	  240rem   width >= 3840px
+  */
+
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 160rem;
+  --breakpoint-5xl: 240rem;
+}
+
 /* 
   ---break---
   */
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: var(--font-orbitron);
-  --font-orbitron: var(--font-orbitron);
   --color-custom-dark: #121212;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -44,23 +63,6 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-}
-
-@theme {
-  /* 
-  sm	  40rem	   width >= 640px 
-  md	  48rem    width >= 768px 
-  lg	  64rem    width >= 1024px 
-  xl	  80rem    width >= 1280px 
-  2xl	  96rem    width >= 1536px 
-  3xl	  120rem   width >= 1920px
-  4xl	  160rem   width >= 2560px
-  5xl	  240rem   width >= 3840px
-  */
-
-  --breakpoint-3xl: 120rem;
-  --breakpoint-4xl: 160rem;
-  --breakpoint-5xl: 240rem;
 }
 
 /* 
@@ -150,5 +152,22 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  /* Source Sans 3 the default body font site‑wide */
+  html {
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* 
+    ---break---
+    */
+
+/* Add to headings to switch to Outfit */
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), system-ui, sans-serif;
   }
 }
