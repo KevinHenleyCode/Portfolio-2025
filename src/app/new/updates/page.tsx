@@ -1,6 +1,8 @@
 import { type SanityDocument } from 'next-sanity'
 import { client } from '@/sanity/client'
+import { buttonVariants } from '@/components/ui/button'
 import Link from 'next/link'
+import { ChevronRight } from 'lucide-react'
 
 export const metadata = {
   title: 'Updates',
@@ -31,10 +33,18 @@ const AllUpdates = async () => {
       <section className='mt-20'>
         <ul>
           {updates.map((update) => (
-            <li key={update._id} className='my-4 bg-gray-400'>
-              <Link href={`updates/${update.slug.current}`}>
-                <h2>{update.title}</h2>
-                <time>{update.publishedAt}</time>
+            <li key={update._id} className='my-4'>
+              <Link
+                href={`updates/${update.slug.current}`}
+                className={`h-12 w-full ${buttonVariants({ variant: 'default' })}`}
+              >
+                <span className='flex w-full items-center justify-center'>
+                  <p className='mr-2'>{update.title}:</p>
+                  <time>
+                    {new Date(update.publishedAt).toLocaleDateString()}
+                  </time>
+                  <ChevronRight />
+                </span>
               </Link>
             </li>
           ))}

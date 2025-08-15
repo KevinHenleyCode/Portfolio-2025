@@ -1,14 +1,14 @@
-import Title from '@/components/textStanards/Title'
-import SubHeader from '@/components/textStanards/SubHeader'
-import PaddingContainer from '@/components/containers/PaddingContainer'
-import SingleUpdateOutline from '@/components/showCasing/SingleUpdateOutline'
 import { type SanityDocument } from 'next-sanity'
 import imageUrlBuilder from '@sanity/image-url'
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import { client } from '@/sanity/client'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { ChevronLeft } from 'lucide-react'
+import UpdateCard from '@/components/cards/update'
 
 /**
- * Generates page based on params passed in slug
+ * Generates title based on slug passed from Sanity
  */
 export async function generateMetadata({ params }: SingleUpdateProps) {
   return {
@@ -29,6 +29,9 @@ interface SingleUpdateProps {
   params: Promise<{ slug: string }>
 }
 
+/**
+ * Generates page based on params passed in slug
+ */
 const SingleUpdate = async ({ params }: SingleUpdateProps) => {
   const update = await client.fetch<SanityDocument>(
     UPDATE_QUERY,
@@ -38,23 +41,28 @@ const SingleUpdate = async ({ params }: SingleUpdateProps) => {
   const updateImageUrl = update.image ? urlFor(update.image)?.url() : null
 
   return (
-    <div className='w-full'>
-      <PaddingContainer>
-        <Title content={update.title} />
-      </PaddingContainer>
-      <SubHeader content={new Date(update.publishedAt).toLocaleDateString()} />
-      <PaddingContainer>
-        <div className='mt-20'>
-          <SingleUpdateOutline
-            postImage={`${updateImageUrl}`}
-            linkGitHub={update.linkGitHub}
-            linkWebSite={update.linkWebSite}
-            mainBody={update.mainBody}
-            additionalHeader={update.additionalHeader}
-            additionalBody={update.additionalBody}
-          />
-        </div>
-      </PaddingContainer>
+    <div className='w-full px-4 py-10'>
+      <header className='flex flex-col items-start'>
+        <h1>{update.title}</h1>
+        <time>{new Date(update.publishedAt).toLocaleDateString()}</time>
+        <Button asChild variant={'outline'} size={'sm'}>
+          <Link
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH}new/updates`}
+            className='flex justify-between'
+          >
+            <ChevronLeft /> Back
+          </Link>
+        </Button>
+      </header>
+      <UpdateCard
+        title={update.title}
+        imageUrl={`${updateImageUrl}`}
+        linkGitHub={update.linkGitHub}
+        linkWebSite={update.linkWebSite}
+        mainBody={update.mainBody}
+        additionalHeader={update.additionalHeader}
+        additionalBody={update.additionalBody}
+      />
     </div>
   )
 }
