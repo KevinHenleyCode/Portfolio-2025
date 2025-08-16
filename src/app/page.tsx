@@ -1,6 +1,5 @@
-import PaddingContainer from '@/components/containers/PaddingContainer'
-import SubHeader from '@/components/textStanards/SubHeader'
-import Title from '@/components/textStanards/Title'
+import BasicPadding from '@/components/containers/basic-padding'
+import PageHeaders from '@/components/text/page-headers'
 
 export const metadata = {
   title: 'Home',
@@ -11,71 +10,69 @@ export const metadata = {
  */
 export default function Home() {
   return (
-    <div>
-      <PaddingContainer>
-        <Title content={'Kevin Henley'} />
-      </PaddingContainer>
-      <SubHeader content={'Full-Stack Web Developer'} />
-      <PaddingContainer>
-        <article className='text-md 3xl:text-2xl 4xl:text-3xl 5xl:text-4xl 3xl:[&>p]:mt-8 4xl:leading-10 5xl:leading-12 mt-20 leading-6 tracking-widest sm:text-lg sm:leading-8 md:mt-28 md:text-xl [&>p]:mt-4'>
-          <p>
-            Welcome to my portfolio. {`I'm`} Kevin, a developer with a passion
-            for building fast, responsive, and scalable web applications. This
-            site is a reflection of my journey, both where {`I’ve`} been
-            professionally and where {`I’m`} heading next.
-          </p>
-          <p>
-            With over five years of experience in web development, {`I’ve`} led
-            frontend efforts for enterprise teams and shipped production-grade
-            applications using React, Next.js, and Express. I most recently,
-            worked as a Senior Frontend Web Developer at VineBrook Homes, where
-            I led a team of eight developers and helped modernize our stack from
-            CakePHP to a Next.js/Express.js architecture, more than doubling
-            development speed and cutting load times by half.
-          </p>
-          <p>
-            A big part of that success came from working closely with our CTO,
-            with whom I collaborated with to exchange ideas and explore
-            improvements to our development process. After pitching the idea to
-            rebuild our client-facing site and internal reporting web app using
-            a modern stack, I received his direct approval to lead the
-            initiative, a decision that brought measurable performance and
-            productivity gains across the board.
-          </p>
-          <p>
-            Throughout my time at VineBrook, I also worked cross-functionally
-            with designers, marketers, and management, and I learned when to
-            push back. Whether it was managing scope creep from business leaders
-            or complex animations from designers that {`didn’t`} fit the
-            original timeline, I made sure to communicate clearly and protect
-            both our deadlines and our {`team’s`} work balance. {`I’m`} easy to
-            work with, but I speak up when {`something’s`} off track. If a
-            change meant delaying a release or moving features to the next
-            sprint, I made sure that was discussed early and approved, not just
-            assumed.
-          </p>
-          <p>
-            The site {`you're`} currently viewing was built from the ground up
-            and deployed on an AWS EC2 instance, which I configured and manage
-            directly. Every page is written using the same technologies I work
-            with every day: Next, TypeScript, and Tailwind. {`You'll`} find
-            throughout the site sections showcasing my favorite tools, links to
-            the projects {`I’ve`} been building, and ways to get in touch.
-          </p>
-          <p>
-            Before tech, I worked in hands-on industries, which gave me a
-            practical, solution-focused mindset that I bring into every project.
-            My transition into development was accelerated through Rice
-            {`University’s`} Full Stack Bootcamp, and {`I’ve`} been sharpening
-            my skills ever since, learning Rust, Tauri, and expanding my AWS
-            knowledge.
-          </p>
-          <p>
-            Thanks for stopping by. Feel free to contact me with any questions,
-            and enjoy exploring the rest of the site.
-          </p>
-        </article>
-      </PaddingContainer>
-    </div>
+    <BasicPadding>
+      <PageHeaders
+        mainHeading={'Kevin Henley'}
+        mainSubHeading={'Full-Stack Web Developer'}
+      />
+
+      <article className='leading-snug [&>p]:my-4 md:[&>p]:text-base lg:[&>p]:my-6 lg:[&>p]:text-lg'>
+        <p>
+          Welcome to my portfolio. {`I'm`} Kevin, a developer with a passion for
+          building fast, responsive, and scalable web applications. This site is
+          a reflection of my journey, both where {`I’ve`} been professionally
+          and where {`I’m`} heading next.
+        </p>
+        <p>
+          With over five years of experience in web development, {`I’ve`} led
+          frontend efforts for enterprise teams and shipped production-grade
+          applications using React, Next.js, and Express. I most recently,
+          worked as a Senior Frontend Web Developer at VineBrook Homes, where I
+          led a team of eight developers and helped modernize our stack from
+          CakePHP to a Next.js/Express.js architecture, more than doubling
+          development speed and cutting load times by half.
+        </p>
+        <p>
+          A big part of that success came from working closely with our CTO,
+          with whom I collaborated with to exchange ideas and explore
+          improvements to our development process. After pitching the idea to
+          rebuild our client-facing site and internal reporting web app using a
+          modern stack, I received his direct approval to lead the initiative, a
+          decision that brought measurable performance and productivity gains
+          across the board.
+        </p>
+        <p>
+          Throughout my time at VineBrook, I also worked cross-functionally with
+          designers, marketers, and management, and I learned when to push back.
+          Whether it was managing scope creep from business leaders or complex
+          animations from designers that {`didn’t`} fit the original timeline, I
+          made sure to communicate clearly and protect both our deadlines and
+          our {`team’s`} work balance. {`I’m`} easy to work with, but I speak up
+          when {`something’s`} off track. If a change meant delaying a release
+          or moving features to the next sprint, I made sure that was discussed
+          early and approved, not just assumed.
+        </p>
+        <p>
+          The site {`you're`} currently viewing was built from the ground up and
+          deployed on an AWS EC2 instance, which I configured and manage
+          directly. Every page is written using the same technologies I work
+          with every day: Next, TypeScript, and Tailwind. {`You'll`} find
+          throughout the site sections showcasing my favorite tools, links to
+          the projects {`I’ve`} been building, and ways to get in touch.
+        </p>
+        <p>
+          Before tech, I worked in hands-on industries, which gave me a
+          practical, solution-focused mindset that I bring into every project.
+          My transition into development was accelerated through Rice
+          {`University’s`} Full Stack Bootcamp, and {`I’ve`} been sharpening my
+          skills ever since, learning Rust, Tauri, and expanding my AWS
+          knowledge.
+        </p>
+        <p>
+          Thanks for stopping by. Feel free to contact me with any questions,
+          and enjoy exploring the rest of the site.
+        </p>
+      </article>
+    </BasicPadding>
   )
 }

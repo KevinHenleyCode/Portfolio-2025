@@ -60,16 +60,20 @@ const UpdateCard = ({
         </CardContent>
         <Separator />
         <CardContent>
-          <h2>Summary:</h2>
-          <div>
+          <h2 className='mb-2 text-lg font-semibold md:text-xl 2xl:text-2xl'>
+            Summary:
+          </h2>
+          <div className='2xl:[&>p]:text-xl [&>p>strong]:mb-2 [&>p>strong]:text-lg [&>p>strong]:font-semibold md:[&>p>strong]:text-xl 2xl:[&>p>strong]:text-2xl'>
             {Array.isArray(mainBody) && <PortableText value={mainBody} />}
           </div>
         </CardContent>
         <Separator />
         <CardFooter>
           <div className='flex flex-col'>
-            <h2>{additionalHeader}</h2>
-            <span>
+            <h2 className='mb-2 text-lg font-semibold md:text-xl 2xl:text-2xl'>
+              {additionalHeader}
+            </h2>
+            <span className='[&>p]:ml-2 2xl:[&>p]:text-xl [&>p>strong]:-ml-2 [&>p>strong]:text-xl'>
               {Array.isArray(additionalBody) && (
                 <PortableText value={additionalBody} />
               )}

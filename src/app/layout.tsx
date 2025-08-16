@@ -1,9 +1,8 @@
 import './globals.css'
 import { Outfit, Source_Sans_3 } from 'next/font/google'
 import type { Metadata } from 'next'
-import NavBar from '@/components/nav/NavBar'
-// import NavBarNew from '@/components/nav/NavBarNew'
-import FooterBar from '@/components/nav/FooterBar'
+import { ThemeProvider } from '@/components/theme-provider'
+import NavBar from '@/components/nav/nav-bar'
 import type { ReactNode } from 'react'
 
 const display = Outfit({
@@ -41,14 +40,21 @@ type RootLayoutProps = {
 
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <html lang='en' className={`${display.variable} ${body.variable}`}>
+    <html
+      lang='en'
+      suppressHydrationWarning
+      className={`${display.variable} ${body.variable}`}
+    >
       <body className={`flex min-h-screen flex-col antialiased`}>
-        <NavBar />
-        {/* <NavBarNew /> */}
-        <main className='bg-custom-dark flex flex-1 flex-col items-center py-20 text-gray-300'>
-          {children}
-        </main>
-        <FooterBar />
+        <ThemeProvider
+          attribute={'class'}
+          defaultTheme={'dark'}
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NavBar />
+          <main className='flex flex-1 flex-col items-center'>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -1,9 +1,10 @@
-import Title from '@/components/textStanards/Title'
-import SubHeader from '@/components/textStanards/SubHeader'
-import PaddingContainer from '@/components/containers/PaddingContainer'
+import BasicPadding from '@/components/containers/basic-padding'
+import PageHeaders from '@/components/text/page-headers'
 import { type SanityDocument } from 'next-sanity'
 import { client } from '@/sanity/client'
-import AllUpdatesOutline from '@/components/showCasing/AllUpdatesOutline'
+import { buttonVariants } from '@/components/ui/button'
+import Link from 'next/link'
+import { ChevronRight } from 'lucide-react'
 
 export const metadata = {
   title: 'Updates',
@@ -26,24 +27,35 @@ const AllUpdates = async () => {
   )
 
   return (
-    <div className='w-full'>
-      <PaddingContainer>
-        <Title content='Updates' />
-      </PaddingContainer>
-      <SubHeader content={`What's Happening Next...`} />
-      <PaddingContainer>
-        <div className='mt-20 grid grid-cols-8 gap-x-4 gap-y-8 2xl:mt-32'>
+    <BasicPadding>
+      <PageHeaders
+        mainHeading={'Updates'}
+        mainSubHeading={`What's Happening Next...`}
+      />
+      <section className='mt-20'>
+        <ul className='grid grid-cols-12 gap-4'>
           {updates.map((update) => (
-            <AllUpdatesOutline
-              key={`${update._id}`}
-              postHeader={update.title}
-              postDate={update.publishedAt}
-              slug={update.slug.current}
-            />
+            <li
+              key={update._id}
+              className='5xl:col-span-3 col-span-12 sm:col-span-6 2xl:col-span-4'
+            >
+              <Link
+                href={`updates/${update.slug.current}`}
+                className={`h-fit w-full ${buttonVariants({ variant: 'default' })}`}
+              >
+                <span className='3xl:text-2xl flex w-full items-center justify-center md:text-lg lg:text-xl'>
+                  <p className='mr-2'>{update.title}:</p>
+                  <time>
+                    {new Date(update.publishedAt).toLocaleDateString()}
+                  </time>
+                  <ChevronRight />
+                </span>
+              </Link>
+            </li>
           ))}
-        </div>
-      </PaddingContainer>
-    </div>
+        </ul>
+      </section>
+    </BasicPadding>
   )
 }
 
