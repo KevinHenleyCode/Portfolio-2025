@@ -13,7 +13,7 @@ export default function Home() {
     <BasicPadding>
       <PageHeaders
         mainHeading={'Kevin Henley'}
-        mainSubHeading={'Full-Stack Web Developer'}
+        mainSubHeading={'Full-Stack Developer'}
       />
 
       <article className='leading-snug [&>p]:my-4 md:[&>p]:text-base lg:[&>p]:my-6 lg:[&>p]:text-lg'>
