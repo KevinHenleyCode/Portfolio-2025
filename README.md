@@ -14,7 +14,6 @@ This is my personal web development portfolio, built to showcase my current skil
 - **Frontend:** React / Next.js
 - **Styling:** Tailwind CSS
 - **Backend:** Node.js (Next.js API routes)
-- **Database (planned for future features):** Prisma + SQLite
 - **Hosting:** Amazon Web Services (EC2)
 - **Version Control:** Git + GitHub
 
@@ -50,7 +49,7 @@ This project is a work in progress and will continue to evolve as I learn and bu
 
 If you’re interested in working together, feel free to connect:
 
-- **Email:** kevinhenleyinfo@gmail.com
+- **Email:** <kevinhenleyinfo@gmail.com>
 - **LinkedIn:** [in/kevin-henley](https://www.linkedin.com/in/kevin-henley/)
 - **GitHub:** [KevinHenleyCode](https://github.com/KevinHenleyCode)
 
